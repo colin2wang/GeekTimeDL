@@ -6,6 +6,6 @@ from geek_time import fetch_my_column
 
 if __name__ == "__main__":
     fetch_my_column()
-    cid = int(input("input video column id\n> "))
+    cid = int(input("input Videos column id\n> "))
     size = 100
     download_video_by_cid(cid, 100)

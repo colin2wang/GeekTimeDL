@@ -101,9 +101,12 @@ ENV/
 .mypy_cache/
 
 # my
-json/
-audio/
-video/
+json/*
+audio/*
+Videos/*
 
 # Idea
 .idea/
+
+# Output
+Ready/*

@@ -45,7 +45,7 @@ cj = browsercookie.chrome()
 
 JSON_PATH = os.path.join(os.getcwd(), 'json/')
 AUDIO_PATH = os.path.join(os.getcwd(), 'audio/')
-VIDEO_PATH = os.path.join(os.getcwd(), 'video/')
+VIDEO_PATH = os.path.join(os.getcwd(), 'Videos/')
 
 # mkdir
 def make_dir(path):
@@ -91,7 +91,7 @@ def fetch_all_column():
 def column_type_string(column_type):
     return {
             1 : "audio",
-            3 : "video",
+            3 : "Videos",
             }.get(column_type, "other")
 
 # 获取我的专栏
@@ -193,29 +193,27 @@ def exec_audio():
 
 
 def exec_video():
-    cid = int(input("input video column id:\n> "))
+    cid = int(input("input Videos column id:\n> "))
     download_video_by_cid(cid, default_size)
 
 print("login 'http://geekbang.org' from chrome first")
 
 if __name__ == "__main__":
-    """ 下载音频
+    # 下载音频
     cid = 50
     size = 100
     download_audio_by_cid(cid, size)
     fetch_my_column()
-    """
 
-    """ 下载视频
-    cid = 77
-    size = 100
-    download_video_by_cid(cid, size)
-    """
 
-    """ 查看所有专栏
-    """
-    fetch_all_column()
+    # 下载视频
+    # cid = 77
+    # size = 100
+    # download_video_by_cid(cid, size)
 
-    """ 查看我的专栏
-    fetch_my_column()
-    """
+
+    # 查看所有专栏
+    # fetch_all_column()
+
+    # 查看我的专栏
+    # fetch_my_column()
